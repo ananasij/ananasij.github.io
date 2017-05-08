@@ -1,0 +1,67 @@
+@import "bootstrap-3.3.6/css/bootstrap.min.css";
+@import url('https://fonts.googleapis.com/css?family=Merriweather+Sans|Pragati+Narrow');
+
+$font-text: 'Merriweather Sans', sans-serif;
+$font-title: 'Pragati Narrow', sans-serif;
+
+$color-text: #491349;
+$color-link: #721D72;
+$color-activeLink: #EFA300;
+$color-elements: #EFB433;
+$color-bg-light: #FFFFFF;
+$color-divider: #e7ebee;
+
+h1, h2, h3, h4 {
+  color: $color-text;
+  font: {
+    family: $font-title;
+  }
+}
+
+p {
+  font: {
+    family: $font-text;
+  }
+}
+
+a {
+  color: $color-link;
+  font: {
+    family: $font-text;
+  }
+  &:hover, &:active, &:focus {
+    color: $color-activeLink;
+  }
+}
+.anchor {
+  display: block;
+  padding-top: 60px;
+  margin-top: -60px;
+}
+
+.page-content {
+  margin-top: 60px;
+}
+
+.row-section {
+  padding: 30px 20px 10px;
+  border-bottom: 2px solid $color-divider;
+}
+
+.menu-top {
+  background-color: $color-bg-light;
+  height: 80px;
+  li {
+    text-transform: uppercase;
+    a:hover {
+      background-color: $color-bg-light;
+    }
+  }
+}
+
+.project-thumbnail {
+  padding: 5px;
+  .project-description {
+    min-height: 100px;
+  }
+}
