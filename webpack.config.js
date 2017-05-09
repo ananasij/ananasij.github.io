@@ -1,22 +1,25 @@
-var HTMLWebpackPlugin = require('html-webpack-plugin');
-var HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
-    template: __dirname + '/app/index.html',
+const path = require('path');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
+
+const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
+    template: path.join(__dirname, '/app/index.html'),
     filename: 'index.html',
     inject: 'body'
 });
 
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var ExtractTextPluginConfig = new ExtractTextPlugin({ // define where to save the file
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+const ExtractTextPluginConfig = new ExtractTextPlugin({ // define where to save the file
     filename: 'dist/[name].bundle.css',
     allChunks: true
 });
 
 module.exports = {
-    entry: [__dirname + '/app/index.js', __dirname + '/app/styles/main.scss'],
+    entry: [path.join(__dirname, '/app/index.js'), path.join(__dirname, '/app/styles/main.scss')],
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use: 'babel-loader'
             },
@@ -38,12 +41,15 @@ module.exports = {
                         name: '[path][name].[ext]'
                     }
                 }]
-            },
+            }
         ]
+    },
+    resolve: {
+        extensions: ['.js', '.jsx']
     },
     output: {
         filename: 'transformed.js',
-        path: __dirname + '/build'
+        path: path.join(__dirname, 'build')
     },
     plugins: [
         HTMLWebpackPluginConfig,
