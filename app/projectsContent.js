@@ -1,43 +1,43 @@
 const projectsContent = [
     {
-        id: 1,
         name: 'Recipe Box',
         thumbnail: '../app/files/images/projects/projects_recipebox.png',
-        description: 'Fusce arcu lacus, tempor at tortor et, placerat malesuada quam. Mauris rhoncus porta tempor. Praesent hendrerit vel eros tempus dictum.',
+        description: 'Online recipe box to save favourite recipes.',
         url: 'https://ananasij.github.io/recipe-box/',
+        technologies: ['React', 'SCSS', 'Bootstrap', 'Local storage', 'Webpack'],
         repositoryUrl: 'https://github.com/ananasij/recipe-box'
     },
     {
-        id: 2,
         name: 'Simon Game',
         thumbnail: '../app/files/images/projects/projects_simongame.png',
-        description: 'Fusce arcu lacus, tempor at tortor et, placerat malesuada quam. Praesent hendrerit vel eros tempus dictum.',
+        description: 'Follow the pattern of lights and sounds and repeat the same combination to test your memory.',
         url: 'https://ananasij.github.io/simonGame/',
+        technologies: ['HTML', 'CSS', 'jQuery'],
         repositoryUrl: 'https://github.com/ananasij/simonGame'
     },
     {
-        id: 3,
-        name: 'Tic-tac-toe Game',
-        thumbnail: '../app/files/images/projects/projects_tictactoe.png',
-        description: 'Fusce arcu lacus, tempor at tortor et, placerat malesuada quam. Mauris rhoncus porta tempor.',
-        url: 'https://ananasij.github.io/Tic-Tac-Toe-game/',
-        repositoryUrl: 'https://github.com/ananasij/Tic-Tac-Toe-game'
-    },
-    {
-        id: 4,
         name: 'Pomodoro Clock',
         thumbnail: '../app/files/images/projects/projects_pomodoro.png',
-        description: 'Fusce arcu lacus, tempor at tortor et, placerat malesuada quam. Mauris rhoncus porta tempor. Praesent hendrerit vel eros tempus dictum.',
+        description: 'Online timer for Pomodoro time management technique.',
         url: 'https://ananasij.github.io/PomodoroClock/',
+        technologies: ['HTML', 'CSS', 'jQuery'],
         repositoryUrl: 'https://github.com/ananasij/PomodoroClock'
     },
     {
-        id: 5,
         name: 'Calculator',
         thumbnail: '../app/files/images/projects/projects_calculator.png',
-        description: 'Mauris rhoncus porta tempor. Praesent hendrerit vel eros tempus dictum.',
+        description: 'Basic online calculator.',
         url: 'https://ananasij.github.io/Calculator/',
+        technologies: ['HTML', 'CSS', 'jQuery'],
         repositoryUrl: 'https://github.com/ananasij/Calculator'
+    },
+    {
+        name: 'Tic-tac-toe Game',
+        thumbnail: '../app/files/images/projects/projects_tictactoe.png',
+        description: 'Classic Tic-Tac-Toe game for one player.',
+        url: 'https://ananasij.github.io/Tic-Tac-Toe-game/',
+        technologies: ['HTML', 'CSS', 'jQuery'],
+        repositoryUrl: 'https://github.com/ananasij/Tic-Tac-Toe-game'
     }
 ];
 

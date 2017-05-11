@@ -5,10 +5,11 @@ import projectsContent from './../projectsContent';
 function Projects() {
     const projectsList = projectsContent.map(project => (
         <Project
-            key={project.id}
+            key={project.name}
             name={project.name}
             thumbnail={project.thumbnail}
             description={project.description}
+            technologies={project.technologies}
             url={project.url}
             repository={project.repositoryUrl}
         />
@@ -17,14 +18,14 @@ function Projects() {
     return (
         <div>
             <span id="projects" className="anchor" />
-            <div className="row row-section">
+            <section className="row row-section">
                 <div className="row">
                     <h2 className="text-center">Projects</h2>
                 </div>
                 <div className="row">
                     {projectsList}
                 </div>
-            </div>
+            </section>
         </div>
     );
 }

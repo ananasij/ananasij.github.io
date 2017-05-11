@@ -7,12 +7,14 @@ $font-title: 'Pragati Narrow', sans-serif;
 $color-text: #491349;
 $color-link: #721D72;
 $color-activeLink: #EFA300;
-$color-elements: #EFB433;
+$color-elements: #F3BC45;
 $color-bg-light: #FFFFFF;
 $color-divider: #e7ebee;
 
-h1, h2, h3, h4 {
-  color: $color-text;
+$grid-float-breakpoint: 400px;
+
+h1, h2, h3, h4, h5, h6 {
+  color: $color-link;
   font: {
     family: $font-title;
   }
@@ -33,10 +35,10 @@ a {
     color: $color-activeLink;
   }
 }
+
 .anchor {
   display: block;
   padding-top: 60px;
-  margin-top: -60px;
 }
 
 .page-content {
@@ -46,6 +48,14 @@ a {
 .row-section {
   padding: 30px 20px 10px;
   border-bottom: 2px solid $color-divider;
+}
+
+.row-padded-top {
+  padding: 20px 0 0;
+}
+
+.row-padded-bottom {
+  padding: 0 0 20px 0;
 }
 
 .menu-top {
@@ -62,6 +72,26 @@ a {
 .project-thumbnail {
   padding: 5px;
   .project-description {
-    min-height: 100px;
+    min-height: 120px;
+  }
+}
+
+.label-technology {
+  display: inline-block;
+  background-color: $color-elements;
+  color: $color-text;
+  margin: 1px 2px;
+  padding: 5px 10px;
+  font: {
+    size: 14px;
+  }
+  &:hover {
+    cursor: default;
+  }
+}
+
+.footer-text {
+  font: {
+    size: 12px;
   }
 }

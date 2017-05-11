@@ -2,6 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Project(props) {
+    const technologies = props.technologies.map(technology => (
+        <span
+            key={technology}
+            className="label label-technology"
+        >
+            {technology}
+        </span>
+    ));
     return (
         <div className="col-xs-12 col-sm-6 col-md-4 project-thumbnail">
             <div className="thumbnail">
@@ -23,7 +31,10 @@ function Project(props) {
                     >
                         <h3>{props.name}</h3>
                     </a>
-                    <p className="project-description">{props.description}</p>
+                    <div className="project-description">
+                        <p>{props.description}</p>
+                        <p>{technologies}</p>
+                    </div>
                     <a
                         href={props.repository}
                         target="_blank"
@@ -42,6 +53,7 @@ Project.propTypes = {
     name: PropTypes.string.isRequired,
     thumbnail: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
+    technologies: PropTypes.array.isRequired,
     url: PropTypes.string.isRequired,
     repository: PropTypes.string.isRequired
 };

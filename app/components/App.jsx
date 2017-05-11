@@ -12,9 +12,21 @@ function App() {
                 <About />
                 <Projects />
                 <Contact />
-                <div className="row row-section">
-                    <p>(c) Hanna Senkevich 2017</p>
-                </div>
+                <footer className="row row-section footer-text">
+                    <p className="text-center">
+                        This page is made with React, ES6, SCSS, Bootstrap, Webpack.
+                    </p>
+                    <p className="text-center">
+                        <a
+                            href="https://github.com/ananasij/ananasij.github.io"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            View code on GitHub.
+                        </a>
+                    </p>
+                    <p className="text-center">(c) Hanna Senkevich 2017</p>
+                </footer>
             </div>
         </div>
     );
