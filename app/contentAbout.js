@@ -16,8 +16,8 @@ export const technologies = [
     { name: 'Bootstrap', filter: true },
     { name: 'jQuery', filter: true },
     { name: 'Webpack', filter: true },
-    { name: 'ESLint', filter: false },
     { name: 'NPM', filter: true },
+    { name: 'ESLint', filter: false },
     { name: 'Git', filter: false },
     { name: 'Jira', filter: false }
 ];
