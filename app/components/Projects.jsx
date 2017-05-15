@@ -38,7 +38,7 @@ function Projects(props) {
 
     return (
         <div>
-            <span id="projects" className="anchor" />
+            <span id="projects" className="anchor js-jump-Projects" />
             <section className="row row-section">
                 <div className="row">
                     <h2 className="text-center">Projects</h2>

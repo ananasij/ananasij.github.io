@@ -1,4 +1,5 @@
 import React from 'react';
+import jump from 'jump.js';
 
 const navItems = [
     { title: 'About', href: '#about' },
@@ -7,11 +8,16 @@ const navItems = [
 ];
 
 function Navbar() {
-    const navbarItems = navItems.map(item => (
-        <li key={item.title}>
-            <a href={item.href}> {item.title} </a>
-        </li>
-    ));
+    const navbarItems = navItems.map((item) => {
+        const target = '.js-jump-'.concat(item.title);
+        return (
+            <li key={item.title}>
+                <a href={item.href} onClick={() => jump(target)}>
+                    {item.title}
+                </a>
+            </li>
+        );
+    });
     return (
         <nav className="navbar navbar-fixed-top menu-top container">
             <div className="collapse navbar-collapse">

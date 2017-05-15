@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import jump from 'jump.js';
 import { about } from './../contentAbout';
 import { technologies } from './../contentAbout';
+
 
 class About extends React.Component {
     constructor() {
@@ -17,6 +19,7 @@ class About extends React.Component {
             this.props.onTechnologySelect(e.target.innerText);
             this.setState({ currentTechnology: e.target.innerText });
         }
+        jump('.js-jump-Projects');
     }
 
     render() {
@@ -48,7 +51,7 @@ class About extends React.Component {
         });
         return (
             <div>
-                <span id="about" className="anchor" />
+                <span id="about" className="anchor js-jump-About" />
                 <section className="row row-section">
                     <div className="row">
                         <h1 className="text-center"> Hanna Senkevich </h1>

@@ -3,7 +3,7 @@ import React from 'react';
 function Contact() {
     return (
         <div>
-            <span id="contact" className="anchor" />
+            <span id="contact" className="anchor js-jump-Contact" />
             <section className="row row-section">
                 <h2>Contact</h2>
                 <div className="row-padded-top">
