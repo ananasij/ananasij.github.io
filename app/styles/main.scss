@@ -1,4 +1,5 @@
 @import "bootstrap-3.3.6/css/bootstrap.min.css";
+@import "tips";
 @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans|Pragati+Narrow');
 
 $font-text: 'Merriweather Sans', sans-serif;
@@ -23,6 +24,7 @@ h1, h2, h3, h4, h5, h6 {
 p {
   font: {
     family: $font-text;
+    size: 16px;
   }
 }
 
@@ -83,15 +85,24 @@ a {
   margin: 1px 2px;
   padding: 5px 10px;
   font: {
+    family: $font-text;
     size: 14px;
-  }
-  &:hover {
-    cursor: default;
   }
 }
 
 .footer-text {
   font: {
     size: 12px;
+  }
+}
+
+.link-technology {
+  text-decoration: none;
+  border-bottom: dashed 1px;
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+  &.selected {
+    color: $color-elements;
   }
 }

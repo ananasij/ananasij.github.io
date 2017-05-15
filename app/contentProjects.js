@@ -4,7 +4,7 @@ const projectsContent = [
         thumbnail: '../app/files/images/projects/projects_recipebox.png',
         description: 'Online recipe box to save favourite recipes.',
         url: 'https://ananasij.github.io/recipe-box/',
-        technologies: ['React', 'SCSS', 'Bootstrap', 'Local storage', 'Webpack'],
+        technologies: ['React', 'SCSS', 'Bootstrap', 'Local storage', 'Webpack', 'NPM'],
         repositoryUrl: 'https://github.com/ananasij/recipe-box'
     },
     {
@@ -41,4 +41,4 @@ const projectsContent = [
     }
 ];
 
-module.exports = projectsContent;
+export default projectsContent;
