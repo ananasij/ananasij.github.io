@@ -21,6 +21,7 @@ class App extends React.Component {
                 <div className="container page-content">
                     <About
                         onTechnologySelect={e => this.updateCurrentTechnology(e)}
+                        currentTechnology={this.state.currentTechnology}
                     />
                     <Projects
                         selectedTechnology={this.state.currentTechnology}

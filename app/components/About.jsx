@@ -11,6 +11,10 @@ class About extends React.Component {
         this.state = { currentTechnology: null };
     }
 
+    componentWillReceiveProps(nextProps) {
+        this.setState({ currentTechnology: nextProps.currentTechnology });
+    }
+
     handleTagClick(e) {
         if (e.target.innerText === this.state.currentTechnology) {
             this.state.currentTechnology = null;
@@ -70,7 +74,12 @@ class About extends React.Component {
 }
 
 About.propTypes = {
-    onTechnologySelect: PropTypes.func.isRequired
+    onTechnologySelect: PropTypes.func.isRequired,
+    currentTechnology: PropTypes.string
+};
+
+About.defaultProps = {
+    currentTechnology: null
 };
 
 export default About;

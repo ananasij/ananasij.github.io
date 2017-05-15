@@ -57,4 +57,8 @@ Projects.propTypes = {
     onFilterReset: PropTypes.func.isRequired
 };
 
+Projects.defaultProps = {
+    selectedTechnology: null
+};
+
 export default Projects;
