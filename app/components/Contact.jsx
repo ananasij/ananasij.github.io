@@ -11,7 +11,7 @@ class Contact extends React.Component {
         this.setState({ copied: true }, () => {
             setTimeout(() => {
                 this.setState({ copied: false });
-            }, 2000);
+            }, 1500);
         });
     }
 
@@ -22,7 +22,9 @@ class Contact extends React.Component {
                 onCopy={() => this.handleCopy()}
             >
                 <span>
-                    <i className="fa fa-envelope" aria-hidden="true" />&nbsp;
+                    <i className="fa fa-envelope" aria-hidden="true" >
+                        &nbsp;
+                    </i>
                     hanna.senkevich(at)gmail.com
                 </span>
             </CopyToClipboard>
@@ -33,7 +35,9 @@ class Contact extends React.Component {
                 data-tip
                 data-tip-content="Copied to the clipboard"
             >
-                <i className="fa fa-envelope" aria-hidden="true" />&nbsp;
+                <i className="fa fa-envelope" aria-hidden="true" >
+                    &nbsp;
+                </i>
                 hanna.senkevich(at)gmail.com
             </span>
         );
@@ -59,17 +63,21 @@ class Contact extends React.Component {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                    <i className="fa fa-skype" aria-hidden="true" />&nbsp;
+                                    <i className="fa fa-skype" aria-hidden="true" >
+                                        &nbsp;
+                                    </i>
                                     hanna.senkevich
                                 </a>
                             </p>
                             <p>
                                 <a
-                                    href="https://linkedin.com/in/hanna-senkevich-036a1062"
+                                    href="https://linkedin.com/in/hanna-senkevich"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                    <i className="fa fa-linkedin-square" aria-hidden="true" />&nbsp;
+                                    <i className="fa fa-linkedin-square" aria-hidden="true" >
+                                        &nbsp;
+                                    </i>
                                     Linkedin
                                 </a>
                             </p>
@@ -81,7 +89,9 @@ class Contact extends React.Component {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                    <i className="fa fa-github-square" aria-hidden="true" />&nbsp;
+                                    <i className="fa fa-github-square" aria-hidden="true" >
+                                        &nbsp;
+                                    </i>
                                     Github
                                 </a>
                             </p>
@@ -91,7 +101,9 @@ class Contact extends React.Component {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                    <i className="fa fa-file-text-o" aria-hidden="true" />&nbsp;
+                                    <i className="fa fa-file-text-o" aria-hidden="true" >
+                                        &nbsp;
+                                    </i>
                                     Download resume
                                 </a>
                             </p>
