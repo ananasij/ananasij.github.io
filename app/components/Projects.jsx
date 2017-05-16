@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
+import jump from 'jump.js';
 import Project from './Project';
 import projectsContent from './../contentProjects';
 
@@ -28,7 +30,10 @@ function Projects(props) {
                 <a
                     href="#projects"
                     className="link-technology tip--top tip--large"
-                    onClick={props.onFilterReset}
+                    onClick={() => {
+                        props.onFilterReset();
+                        jump('.js-jump-Projects');
+                    }}
                 >
                     Show all.
                 </a>
@@ -45,7 +50,13 @@ function Projects(props) {
                     {props.selectedTechnology ? filteredMessage : null}
                 </div>
                 <div className="row">
-                    {projectsList}
+                    <CSSTransitionGroup
+                        transitionName="projects-list-easing"
+                        transitionEnterTimeout={500}
+                        transitionLeaveTimeout={300}
+                    >
+                        {projectsList}
+                    </CSSTransitionGroup>
                 </div>
             </section>
         </div>

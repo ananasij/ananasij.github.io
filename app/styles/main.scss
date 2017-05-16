@@ -114,3 +114,19 @@ a {
   }
   cursor: pointer;
 }
+
+.projects-list-easing-enter {
+  opacity: 0.01;
+  &.projects-list-easing-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+  }
+}
+
+.projects-list-easing-leave {
+  opacity: 1;
+  &.projects-list-easing-leave-active {
+    opacity: 0.01;
+    transition: opacity 300ms ease-in;
+  }
+}
