@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import jump from 'jump.js';
-import { about } from './../contentAbout';
-import { technologies } from './../contentAbout';
+import { technologies, AboutText } from './../contentAbout';
 
 
 class About extends React.Component {
@@ -17,11 +16,9 @@ class About extends React.Component {
 
     handleTagClick(e) {
         if (e.target.innerText === this.state.currentTechnology) {
-            this.state.currentTechnology = null;
             this.props.onTechnologySelect(null);
         } else {
             this.props.onTechnologySelect(e.target.innerText);
-            this.setState({ currentTechnology: e.target.innerText });
         }
         jump('.js-jump-Projects');
     }
@@ -63,7 +60,7 @@ class About extends React.Component {
                     </div>
 
                     <div className="row row-padded-top">
-                        <p dangerouslySetInnerHTML={{ __html: about }} />
+                        <AboutText />
                         <h3> Technologies and tools I&apos;m using </h3>
                         <p>{technologyList}</p>
                     </div>

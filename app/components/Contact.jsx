@@ -16,12 +16,26 @@ class Contact extends React.Component {
     }
 
     render() {
-        const tooltipCopied = (
+        const email = (
+            <CopyToClipboard
+                text="hanna.senkevich@gmail.com"
+                onCopy={() => this.handleCopy()}
+            >
+                <span>
+                    <i className="fa fa-envelope" aria-hidden="true" />&nbsp;
+                    hanna.senkevich(at)gmail.com
+                </span>
+            </CopyToClipboard>
+        );
+        const emailCopied = (
             <span
                 className="tip--top tip--large tip--visible"
                 data-tip
                 data-tip-content="Copied to the clipboard"
-            />
+            >
+                <i className="fa fa-envelope" aria-hidden="true" />&nbsp;
+                hanna.senkevich(at)gmail.com
+            </span>
         );
         return (
             <div>
@@ -37,16 +51,7 @@ class Contact extends React.Component {
                     <div className="row row-padded-bottom">
                         <div className="col-sm-6">
                             <p className="contact-option">
-                                <CopyToClipboard
-                                    text="hanna.senkevich@gmail.com"
-                                    onCopy={() => this.handleCopy()}
-                                >
-                                    <span>
-                                        <i className="fa fa-envelope" aria-hidden="true" />&nbsp;
-                                        hanna.senkevich(at)gmail.com
-                                    </span>
-                                </CopyToClipboard>
-                                {this.state.copied ? tooltipCopied : null}
+                                {this.state.copied ? emailCopied : email}
                             </p>
                             <p>
                                 <a
