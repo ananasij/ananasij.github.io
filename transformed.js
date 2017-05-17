@@ -10657,7 +10657,7 @@ class Contact extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 'a',
                                 {
-                                    href: '../app/files/HannaSenkevich_CV.pdf',
+                                    href: 'files/HannaSenkevich_CV.pdf',
                                     target: '_blank',
                                     rel: 'noopener noreferrer'
                                 },
@@ -10967,35 +10967,35 @@ const technologies = [{ name: 'Javascript', filter: false }, { name: 'ES6', filt
 "use strict";
 const projectsContent = [{
     name: 'Recipe Box',
-    thumbnail: '../app/files/images/projects/projects_recipebox.png',
+    thumbnail: 'files/images/projects/projects_recipebox.png',
     description: 'Online recipe box to save favourite recipes.',
     url: 'https://ananasij.github.io/recipe-box/',
     technologies: ['React', 'SCSS', 'Bootstrap', 'Local storage', 'Webpack', 'NPM'],
     repositoryUrl: 'https://github.com/ananasij/recipe-box'
 }, {
     name: 'Simon Game',
-    thumbnail: '../app/files/images/projects/projects_simongame.png',
+    thumbnail: 'files/images/projects/projects_simongame.png',
     description: 'Follow the pattern of lights and sounds and repeat the same combination to test your memory.',
     url: 'https://ananasij.github.io/simonGame/',
     technologies: ['HTML', 'CSS', 'jQuery'],
     repositoryUrl: 'https://github.com/ananasij/simonGame'
 }, {
     name: 'Pomodoro Clock',
-    thumbnail: '../app/files/images/projects/projects_pomodoro.png',
+    thumbnail: 'files/images/projects/projects_pomodoro.png',
     description: 'Online timer for Pomodoro time management technique.',
     url: 'https://ananasij.github.io/PomodoroClock/',
     technologies: ['HTML', 'CSS', 'jQuery'],
     repositoryUrl: 'https://github.com/ananasij/PomodoroClock'
 }, {
     name: 'Calculator',
-    thumbnail: '../app/files/images/projects/projects_calculator.png',
+    thumbnail: 'files/images/projects/projects_calculator.png',
     description: 'Basic online calculator.',
     url: 'https://ananasij.github.io/Calculator/',
     technologies: ['HTML', 'CSS', 'jQuery'],
     repositoryUrl: 'https://github.com/ananasij/Calculator'
 }, {
     name: 'Tic-tac-toe Game',
-    thumbnail: '../app/files/images/projects/projects_tictactoe.png',
+    thumbnail: 'files/images/projects/projects_tictactoe.png',
     description: 'Classic Tic-Tac-Toe game for one player.',
     url: 'https://ananasij.github.io/Tic-Tac-Toe-game/',
     technologies: ['HTML', 'CSS', 'jQuery'],
