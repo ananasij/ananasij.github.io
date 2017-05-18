@@ -11176,27 +11176,6 @@ var projectsContent = [{
     url: 'https://ananasij.github.io/Tic-Tac-Toe-game/',
     technologies: ['HTML', 'CSS', 'jQuery'],
     repositoryUrl: 'https://github.com/ananasij/Tic-Tac-Toe-game'
-}, {
-    name: 'freeCodeCamp leaderboard',
-    thumbnail: 'files/images/projects/projects_tictactoe.png',
-    description: 'A list of the most active freeCodeCamp participants.',
-    url: 'https://ananasij.github.io/leaderboard/',
-    technologies: ['React', 'SCSS', 'Bootstrap', 'Webpack', 'NPM'],
-    repositoryUrl: 'https://github.com/ananasij/leaderboard'
-}, {
-    name: 'TwitchTV browser',
-    thumbnail: 'files/images/projects/projects_tictactoe.png',
-    description: 'Classic Tic-Tac-Toe game for one player.',
-    url: 'https://ananasij.github.io/Tic-Tac-Toe-game/',
-    technologies: ['HTML', 'CSS', 'jQuery'],
-    repositoryUrl: 'https://github.com/ananasij/TwitchTV-app'
-}, {
-    name: 'Wiki-viewer',
-    thumbnail: 'files/images/projects/projects_tictactoe.png',
-    description: 'Classic Tic-Tac-Toe game for one player.',
-    url: 'https://ananasij.github.io/Tic-Tac-Toe-game/',
-    technologies: ['HTML', 'CSS', 'jQuery'],
-    repositoryUrl: 'https://github.com/ananasij/wiki-viewer'
 }];
 
 exports.default = projectsContent;
