@@ -104,7 +104,7 @@ class Contact extends React.Component {
                                     <i className="fa fa-file-text-o" aria-hidden="true" >
                                         &nbsp;
                                     </i>
-                                    Download resume
+                                    Download CV
                                 </a>
                             </p>
                         </div>
