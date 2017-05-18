@@ -97,7 +97,7 @@ class Contact extends React.Component {
                             </p>
                             <p>
                                 <a
-                                    href="../app/files/HannaSenkevich_CV.pdf"
+                                    href="files/HannaSenkevich_CV.pdf"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >

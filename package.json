@@ -5,8 +5,11 @@
   "repository": "https://github.com/ananasij/ananasij.github.io",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
-    "start": "webpack-dev-server"
+    "build-copy-files": "cp -R ./app/files ./build/",
+    "build": "npm run build-copy-files && webpack",
+    "start": "npm run build-copy-files && webpack-dev-server",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build -b master"
   },
   "author": "",
   "license": "ISC",
@@ -29,6 +32,7 @@
     "eslint-plugin-react": "^6.10.3",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.11.1",
+    "gh-pages": "^1.0.0",
     "html-webpack-plugin": "^2.28.0",
     "node-sass": "^4.5.2",
     "react-transition-group": "^1.1.3",

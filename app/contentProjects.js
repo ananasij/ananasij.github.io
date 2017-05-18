@@ -1,7 +1,7 @@
 const projectsContent = [
     {
         name: 'Recipe Box',
-        thumbnail: '../app/files/images/projects/projects_recipebox.png',
+        thumbnail: 'files/images/projects/projects_recipebox.png',
         description: 'Online recipe box to save favourite recipes.',
         url: 'https://ananasij.github.io/recipe-box/',
         technologies: ['React', 'SCSS', 'Bootstrap', 'Local storage', 'Webpack', 'NPM'],
@@ -9,7 +9,7 @@ const projectsContent = [
     },
     {
         name: 'Simon Game',
-        thumbnail: '../app/files/images/projects/projects_simongame.png',
+        thumbnail: 'files/images/projects/projects_simongame.png',
         description: 'Follow the pattern of lights and sounds and repeat the same combination to test your memory.',
         url: 'https://ananasij.github.io/simonGame/',
         technologies: ['HTML', 'CSS', 'jQuery'],
@@ -17,7 +17,7 @@ const projectsContent = [
     },
     {
         name: 'Pomodoro Clock',
-        thumbnail: '../app/files/images/projects/projects_pomodoro.png',
+        thumbnail: 'files/images/projects/projects_pomodoro.png',
         description: 'Online timer for Pomodoro time management technique.',
         url: 'https://ananasij.github.io/PomodoroClock/',
         technologies: ['HTML', 'CSS', 'jQuery'],
@@ -25,15 +25,15 @@ const projectsContent = [
     },
     {
         name: 'Calculator',
-        thumbnail: '../app/files/images/projects/projects_calculator.png',
+        thumbnail: 'files/images/projects/projects_calculator.png',
         description: 'Basic online calculator.',
         url: 'https://ananasij.github.io/Calculator/',
         technologies: ['HTML', 'CSS', 'jQuery'],
         repositoryUrl: 'https://github.com/ananasij/Calculator'
     },
     {
-        name: 'Tic-tac-toe Game',
-        thumbnail: '../app/files/images/projects/projects_tictactoe.png',
+        name: 'Tic-tac-toe',
+        thumbnail: 'files/images/projects/projects_tictactoe.png',
         description: 'Classic Tic-Tac-Toe game for one player.',
         url: 'https://ananasij.github.io/Tic-Tac-Toe-game/',
         technologies: ['HTML', 'CSS', 'jQuery'],
