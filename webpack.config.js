@@ -14,6 +14,10 @@ const ExtractTextPluginConfig = new ExtractTextPlugin({ // define where to save 
     allChunks: true
 });
 
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
+const CopyWebpackPluginConfig = new CopyWebpackPlugin([{ from: './app/files', to: './files' }]);
+
 module.exports = {
     entry: [path.join(__dirname, '/app/index.js'), path.join(__dirname, '/app/styles/main.scss')],
     module: {
@@ -53,7 +57,8 @@ module.exports = {
     },
     plugins: [
         HTMLWebpackPluginConfig,
-        ExtractTextPluginConfig
+        ExtractTextPluginConfig,
+        CopyWebpackPluginConfig
     ],
     devtool: 'source-map'
 };

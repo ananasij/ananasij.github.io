@@ -5,9 +5,8 @@
   "repository": "https://github.com/ananasij/ananasij.github.io",
   "main": "index.js",
   "scripts": {
-    "build-copy-files": "cp -R ./app/files ./build/",
-    "build": "npm run build-copy-files && webpack",
-    "start": "npm run build-copy-files && webpack-dev-server",
+    "build": "webpack",
+    "start": "webpack-dev-server",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build -b master"
   },
@@ -24,6 +23,7 @@
     "babel-core": "^6.24.0",
     "babel-loader": "^6.4.1",
     "babel-preset-react": "^6.23.0",
+    "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.0",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^14.1.0",
