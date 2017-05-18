@@ -4744,6 +4744,7 @@ module.exports = shallowEqual;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 // Robert Penner's easeInOutQuad
 
 // find the rest of his easing functions here: http://robertpenner.com/easing/
@@ -4910,7 +4911,7 @@ var jumper = function jumper() {
 
 var singleton = jumper();
 
-/* harmony default export */ __webpack_exports__["a"] = (singleton);
+/* harmony default export */ __webpack_exports__["default"] = (singleton);
 
 
 /***/ }),
@@ -10290,20 +10291,26 @@ module.exports = getIteratorFn;
 
 /***/ }),
 /* 87 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_App__ = __webpack_require__(90);
 
 
+var _react = __webpack_require__(7);
 
+var _react2 = _interopRequireDefault(_react);
 
-__WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__components_App__["a" /* default */]), document.getElementById('app'));
+var _reactDom = __webpack_require__(60);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _App = __webpack_require__(90);
+
+var _App2 = _interopRequireDefault(_App);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+_reactDom2.default.render(_react2.default.createElement(_App2.default), document.getElementById('app'));
 
 /***/ }),
 /* 88 */
@@ -10313,404 +10320,529 @@ __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODU
 
 /***/ }),
 /* 89 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jump_js__ = __webpack_require__(35);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__contentAbout__ = __webpack_require__(95);
 
 
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _react = __webpack_require__(7);
 
-class About extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
-    constructor() {
-        super();
-        this.state = { currentTechnology: null };
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(15);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _jump = __webpack_require__(35);
+
+var _jump2 = _interopRequireDefault(_jump);
+
+var _contentAbout = __webpack_require__(95);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var About = function (_React$Component) {
+    _inherits(About, _React$Component);
+
+    function About() {
+        _classCallCheck(this, About);
+
+        var _this = _possibleConstructorReturn(this, (About.__proto__ || Object.getPrototypeOf(About)).call(this));
+
+        _this.state = { currentTechnology: null };
+        return _this;
     }
 
-    componentWillReceiveProps(nextProps) {
-        this.setState({ currentTechnology: nextProps.currentTechnology });
-    }
-
-    handleTagClick(e) {
-        if (e.target.innerText === this.state.currentTechnology) {
-            this.props.onTechnologySelect(null);
-        } else {
-            this.props.onTechnologySelect(e.target.innerText);
+    _createClass(About, [{
+        key: 'componentWillReceiveProps',
+        value: function componentWillReceiveProps(nextProps) {
+            this.setState({ currentTechnology: nextProps.currentTechnology });
         }
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_jump_js__["a" /* default */])('.js-jump-Projects');
-    }
-
-    render() {
-        const technologyList = __WEBPACK_IMPORTED_MODULE_3__contentAbout__["a" /* technologies */].map((technology, i) => {
-            let technologyNode = technology.name;
-            if (technology.filter) {
-                let styles = 'link-technology tip--top tip--large';
-                if (technology.name === this.state.currentTechnology) {
-                    styles += ' selected';
-                }
-                technologyNode = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'a',
-                    {
-                        href: '#projects',
-                        className: styles,
-                        onClick: e => this.handleTagClick(e),
-                        'data-tip': true,
-                        'data-tip-content': 'Click to view all projects made with this technology'
-                    },
-                    technology.name
-                );
+    }, {
+        key: 'handleTagClick',
+        value: function handleTagClick(e) {
+            if (e.target.innerText === this.state.currentTechnology) {
+                this.props.onTechnologySelect(null);
+            } else {
+                this.props.onTechnologySelect(e.target.innerText);
             }
-            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'span',
-                { key: technology.name },
-                technologyNode,
-                i === __WEBPACK_IMPORTED_MODULE_3__contentAbout__["a" /* technologies */].length - 1 ? '' : ', '
-            );
-        });
-        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'div',
-            null,
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { id: 'about', className: 'anchor js-jump-About' }),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'section',
-                { className: 'row row-section' },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: 'row' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'h1',
-                        { className: 'text-center' },
-                        ' Hanna Senkevich '
+            (0, _jump2.default)('.js-jump-Projects');
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _this2 = this;
+
+            var technologyList = _contentAbout.technologies.map(function (technology, i) {
+                var technologyNode = technology.name;
+                if (technology.filter) {
+                    var styles = 'link-technology tip--top tip--large';
+                    if (technology.name === _this2.state.currentTechnology) {
+                        styles += ' selected';
+                    }
+                    technologyNode = _react2.default.createElement(
+                        'a',
+                        {
+                            href: '#projects',
+                            className: styles,
+                            onClick: function onClick(e) {
+                                return _this2.handleTagClick(e);
+                            },
+                            'data-tip': true,
+                            'data-tip-content': 'Click to view all projects made with this technology'
+                        },
+                        technology.name
+                    );
+                }
+                return _react2.default.createElement(
+                    'span',
+                    { key: technology.name },
+                    technologyNode,
+                    i === _contentAbout.technologies.length - 1 ? '' : ', '
+                );
+            });
+            return _react2.default.createElement(
+                'div',
+                null,
+                _react2.default.createElement('span', { id: 'about', className: 'anchor js-jump-About' }),
+                _react2.default.createElement(
+                    'section',
+                    { className: 'row row-section' },
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'row' },
+                        _react2.default.createElement(
+                            'h1',
+                            { className: 'text-center' },
+                            ' Hanna Senkevich '
+                        ),
+                        _react2.default.createElement(
+                            'h2',
+                            { className: 'text-center' },
+                            ' Front-end developer '
+                        )
                     ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'h2',
-                        { className: 'text-center' },
-                        ' Front-end developer '
-                    )
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: 'row row-padded-top' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__contentAbout__["b" /* AboutText */], null),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'h3',
-                        null,
-                        ' Technologies and tools I\'m using '
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'p',
-                        null,
-                        technologyList
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'row row-padded-top' },
+                        _react2.default.createElement(_contentAbout.AboutText, null),
+                        _react2.default.createElement(
+                            'h3',
+                            null,
+                            ' Technologies and tools I\'m using '
+                        ),
+                        _react2.default.createElement(
+                            'p',
+                            null,
+                            technologyList
+                        )
                     )
                 )
-            )
-        );
-    }
-}
+            );
+        }
+    }]);
+
+    return About;
+}(_react2.default.Component);
 
 About.propTypes = {
-    onTechnologySelect: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func.isRequired,
-    currentTechnology: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string
+    onTechnologySelect: _propTypes2.default.func.isRequired,
+    currentTechnology: _propTypes2.default.string
 };
 
 About.defaultProps = {
     currentTechnology: null
 };
 
-/* harmony default export */ __webpack_exports__["a"] = (About);
+exports.default = About;
 
 /***/ }),
 /* 90 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__About__ = __webpack_require__(89);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Projects__ = __webpack_require__(94);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Contact__ = __webpack_require__(91);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Navbar__ = __webpack_require__(92);
 
 
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _react = __webpack_require__(7);
 
+var _react2 = _interopRequireDefault(_react);
 
-class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
-    constructor() {
-        super();
-        this.state = { currentTechnology: null };
+var _About = __webpack_require__(89);
+
+var _About2 = _interopRequireDefault(_About);
+
+var _Projects = __webpack_require__(94);
+
+var _Projects2 = _interopRequireDefault(_Projects);
+
+var _Contact = __webpack_require__(91);
+
+var _Contact2 = _interopRequireDefault(_Contact);
+
+var _Navbar = __webpack_require__(92);
+
+var _Navbar2 = _interopRequireDefault(_Navbar);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var App = function (_React$Component) {
+    _inherits(App, _React$Component);
+
+    function App() {
+        _classCallCheck(this, App);
+
+        var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
+
+        _this.state = { currentTechnology: null };
+        return _this;
     }
 
-    updateCurrentTechnology(technologyName) {
-        this.setState({ currentTechnology: technologyName });
-    }
+    _createClass(App, [{
+        key: 'updateCurrentTechnology',
+        value: function updateCurrentTechnology(technologyName) {
+            this.setState({ currentTechnology: technologyName });
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _this2 = this;
 
-    render() {
-        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'div',
-            { className: 'container' },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__Navbar__["a" /* default */], null),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            return _react2.default.createElement(
                 'div',
-                { className: 'container page-content' },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__About__["a" /* default */], {
-                    onTechnologySelect: e => this.updateCurrentTechnology(e),
-                    currentTechnology: this.state.currentTechnology
-                }),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Projects__["a" /* default */], {
-                    selectedTechnology: this.state.currentTechnology,
-                    onFilterReset: () => this.updateCurrentTechnology(null)
-                }),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__Contact__["a" /* default */], null),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'footer',
-                    { className: 'row row-section footer-text' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'p',
-                        { className: 'text-center' },
-                        'This page is made with React, ES6, SCSS, Bootstrap, Webpack.'
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'p',
-                        { className: 'text-center' },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'a',
-                            {
-                                href: 'https://github.com/ananasij/ananasij.github.io',
-                                target: '_blank',
-                                rel: 'noopener noreferrer'
-                            },
-                            'View code on GitHub.'
+                { className: 'container' },
+                _react2.default.createElement(_Navbar2.default, null),
+                _react2.default.createElement(
+                    'div',
+                    { className: 'container page-content' },
+                    _react2.default.createElement(_About2.default, {
+                        onTechnologySelect: function onTechnologySelect(e) {
+                            return _this2.updateCurrentTechnology(e);
+                        },
+                        currentTechnology: this.state.currentTechnology
+                    }),
+                    _react2.default.createElement(_Projects2.default, {
+                        selectedTechnology: this.state.currentTechnology,
+                        onFilterReset: function onFilterReset() {
+                            return _this2.updateCurrentTechnology(null);
+                        }
+                    }),
+                    _react2.default.createElement(_Contact2.default, null),
+                    _react2.default.createElement(
+                        'footer',
+                        { className: 'row row-section footer-text' },
+                        _react2.default.createElement(
+                            'p',
+                            { className: 'text-center' },
+                            'This page is made with React, ES6, SCSS, Bootstrap, Webpack.'
+                        ),
+                        _react2.default.createElement(
+                            'p',
+                            { className: 'text-center' },
+                            _react2.default.createElement(
+                                'a',
+                                {
+                                    href: 'https://github.com/ananasij/ananasij.github.io',
+                                    target: '_blank',
+                                    rel: 'noopener noreferrer'
+                                },
+                                'View code on GitHub.'
+                            )
+                        ),
+                        _react2.default.createElement(
+                            'p',
+                            { className: 'text-center' },
+                            '(c) Hanna Senkevich 2017'
                         )
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'p',
-                        { className: 'text-center' },
-                        '(c) Hanna Senkevich 2017'
                     )
                 )
-            )
-        );
-    }
-}
+            );
+        }
+    }]);
 
-/* harmony default export */ __webpack_exports__["a"] = (App);
+    return App;
+}(_react2.default.Component);
+
+exports.default = App;
 
 /***/ }),
 /* 91 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_copy_to_clipboard__ = __webpack_require__(121);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_copy_to_clipboard___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_copy_to_clipboard__);
 
 
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
 
-class Contact extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
-    constructor() {
-        super();
-        this.state = { copied: false };
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(7);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactCopyToClipboard = __webpack_require__(121);
+
+var _reactCopyToClipboard2 = _interopRequireDefault(_reactCopyToClipboard);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Contact = function (_React$Component) {
+    _inherits(Contact, _React$Component);
+
+    function Contact() {
+        _classCallCheck(this, Contact);
+
+        var _this = _possibleConstructorReturn(this, (Contact.__proto__ || Object.getPrototypeOf(Contact)).call(this));
+
+        _this.state = { copied: false };
+        return _this;
     }
 
-    handleCopy() {
-        this.setState({ copied: true }, () => {
-            setTimeout(() => {
-                this.setState({ copied: false });
-            }, 1500);
-        });
-    }
+    _createClass(Contact, [{
+        key: 'handleCopy',
+        value: function handleCopy() {
+            var _this2 = this;
 
-    render() {
-        const email = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_1_react_copy_to_clipboard___default.a,
-            {
-                text: 'hanna.senkevich@gmail.com',
-                onCopy: () => this.handleCopy()
-            },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            this.setState({ copied: true }, function () {
+                setTimeout(function () {
+                    _this2.setState({ copied: false });
+                }, 1500);
+            });
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _this3 = this;
+
+            var email = _react2.default.createElement(
+                _reactCopyToClipboard2.default,
+                {
+                    text: 'hanna.senkevich@gmail.com',
+                    onCopy: function onCopy() {
+                        return _this3.handleCopy();
+                    }
+                },
+                _react2.default.createElement(
+                    'span',
+                    null,
+                    _react2.default.createElement(
+                        'i',
+                        { className: 'fa fa-envelope', 'aria-hidden': 'true' },
+                        '\xA0'
+                    ),
+                    'hanna.senkevich(at)gmail.com'
+                )
+            );
+            var emailCopied = _react2.default.createElement(
                 'span',
-                null,
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                {
+                    className: 'tip--top tip--large tip--visible',
+                    'data-tip': true,
+                    'data-tip-content': 'Copied to the clipboard'
+                },
+                _react2.default.createElement(
                     'i',
                     { className: 'fa fa-envelope', 'aria-hidden': 'true' },
                     '\xA0'
                 ),
                 'hanna.senkevich(at)gmail.com'
-            )
-        );
-        const emailCopied = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'span',
-            {
-                className: 'tip--top tip--large tip--visible',
-                'data-tip': true,
-                'data-tip-content': 'Copied to the clipboard'
-            },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'i',
-                { className: 'fa fa-envelope', 'aria-hidden': 'true' },
-                '\xA0'
-            ),
-            'hanna.senkevich(at)gmail.com'
-        );
-        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'div',
-            null,
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { id: 'contact', className: 'anchor js-jump-Contact' }),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'section',
-                { className: 'row row-section' },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'h2',
-                    { className: 'text-center' },
-                    'Contact'
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: 'row-padded-top' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'p',
-                        null,
-                        'I\'m looking for a job! Feel free to get in touch with me via any of the channels below.'
-                    )
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: 'row row-padded-bottom' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            );
+            return _react2.default.createElement(
+                'div',
+                null,
+                _react2.default.createElement('span', { id: 'contact', className: 'anchor js-jump-Contact' }),
+                _react2.default.createElement(
+                    'section',
+                    { className: 'row row-section' },
+                    _react2.default.createElement(
+                        'h2',
+                        { className: 'text-center' },
+                        'Contact'
+                    ),
+                    _react2.default.createElement(
                         'div',
-                        { className: 'col-sm-6' },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'p',
-                            { className: 'contact-option' },
-                            this.state.copied ? emailCopied : email
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        { className: 'row-padded-top' },
+                        _react2.default.createElement(
                             'p',
                             null,
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'a',
-                                {
-                                    href: 'skype:hanna.senkevich?chat',
-                                    target: '_blank',
-                                    rel: 'noopener noreferrer'
-                                },
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    'i',
-                                    { className: 'fa fa-skype', 'aria-hidden': 'true' },
-                                    '\xA0'
-                                ),
-                                'hanna.senkevich'
-                            )
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'p',
-                            null,
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'a',
-                                {
-                                    href: 'https://linkedin.com/in/hanna-senkevich',
-                                    target: '_blank',
-                                    rel: 'noopener noreferrer'
-                                },
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    'i',
-                                    { className: 'fa fa-linkedin-square', 'aria-hidden': 'true' },
-                                    '\xA0'
-                                ),
-                                'Linkedin'
-                            )
+                            'I\'m looking for a job! Feel free to get in touch with me via any of the channels below.'
                         )
                     ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    _react2.default.createElement(
                         'div',
-                        { className: 'col-sm-6' },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'p',
-                            null,
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'a',
-                                {
-                                    href: 'https://github.com/ananasij',
-                                    target: '_blank',
-                                    rel: 'noopener noreferrer'
-                                },
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    'i',
-                                    { className: 'fa fa-github-square', 'aria-hidden': 'true' },
-                                    '\xA0'
-                                ),
-                                'Github'
+                        { className: 'row row-padded-bottom' },
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'col-sm-6' },
+                            _react2.default.createElement(
+                                'p',
+                                { className: 'contact-option' },
+                                this.state.copied ? emailCopied : email
+                            ),
+                            _react2.default.createElement(
+                                'p',
+                                null,
+                                _react2.default.createElement(
+                                    'a',
+                                    {
+                                        href: 'skype:hanna.senkevich?chat',
+                                        target: '_blank',
+                                        rel: 'noopener noreferrer'
+                                    },
+                                    _react2.default.createElement(
+                                        'i',
+                                        { className: 'fa fa-skype', 'aria-hidden': 'true' },
+                                        '\xA0'
+                                    ),
+                                    'hanna.senkevich'
+                                )
+                            ),
+                            _react2.default.createElement(
+                                'p',
+                                null,
+                                _react2.default.createElement(
+                                    'a',
+                                    {
+                                        href: 'https://linkedin.com/in/hanna-senkevich',
+                                        target: '_blank',
+                                        rel: 'noopener noreferrer'
+                                    },
+                                    _react2.default.createElement(
+                                        'i',
+                                        { className: 'fa fa-linkedin-square', 'aria-hidden': 'true' },
+                                        '\xA0'
+                                    ),
+                                    'Linkedin'
+                                )
                             )
                         ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'p',
-                            null,
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'a',
-                                {
-                                    href: 'files/HannaSenkevich_CV.pdf',
-                                    target: '_blank',
-                                    rel: 'noopener noreferrer'
-                                },
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    'i',
-                                    { className: 'fa fa-file-text-o', 'aria-hidden': 'true' },
-                                    '\xA0'
-                                ),
-                                'Download resume'
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'col-sm-6' },
+                            _react2.default.createElement(
+                                'p',
+                                null,
+                                _react2.default.createElement(
+                                    'a',
+                                    {
+                                        href: 'https://github.com/ananasij',
+                                        target: '_blank',
+                                        rel: 'noopener noreferrer'
+                                    },
+                                    _react2.default.createElement(
+                                        'i',
+                                        { className: 'fa fa-github-square', 'aria-hidden': 'true' },
+                                        '\xA0'
+                                    ),
+                                    'Github'
+                                )
+                            ),
+                            _react2.default.createElement(
+                                'p',
+                                null,
+                                _react2.default.createElement(
+                                    'a',
+                                    {
+                                        href: 'files/HannaSenkevich_CV.pdf',
+                                        target: '_blank',
+                                        rel: 'noopener noreferrer'
+                                    },
+                                    _react2.default.createElement(
+                                        'i',
+                                        { className: 'fa fa-file-text-o', 'aria-hidden': 'true' },
+                                        '\xA0'
+                                    ),
+                                    'Download resume'
+                                )
                             )
                         )
                     )
                 )
-            )
-        );
-    }
-}
+            );
+        }
+    }]);
 
-/* harmony default export */ __webpack_exports__["a"] = (Contact);
+    return Contact;
+}(_react2.default.Component);
+
+exports.default = Contact;
 
 /***/ }),
 /* 92 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_jump_js__ = __webpack_require__(35);
 
 
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
 
-const navItems = [{ title: 'About', href: '#about' }, { title: 'Projects', href: '#projects' }, { title: 'Contact', href: '#contact' }];
+var _react = __webpack_require__(7);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _jump = __webpack_require__(35);
+
+var _jump2 = _interopRequireDefault(_jump);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var navItems = [{ title: 'About', href: '#about' }, { title: 'Projects', href: '#projects' }, { title: 'Contact', href: '#contact' }];
 
 function Navbar() {
-    const navbarItems = navItems.map(item => {
-        const target = '.js-jump-'.concat(item.title);
-        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    var navbarItems = navItems.map(function (item) {
+        var target = '.js-jump-'.concat(item.title);
+        return _react2.default.createElement(
             'li',
             { key: item.title },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            _react2.default.createElement(
                 'a',
-                { href: item.href, onClick: () => __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_jump_js__["a" /* default */])(target) },
+                { href: item.href, onClick: function onClick() {
+                        return (0, _jump2.default)(target);
+                    } },
                 item.title
             )
         );
     });
-    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    return _react2.default.createElement(
         'nav',
         { className: 'navbar navbar-fixed-top menu-top container' },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        _react2.default.createElement(
             'div',
             { className: 'collapse navbar-collapse' },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            _react2.default.createElement(
                 'ul',
                 { className: 'nav navbar-nav navbar-right' },
                 navbarItems
@@ -10719,86 +10851,97 @@ function Navbar() {
     );
 }
 
-/* harmony default export */ __webpack_exports__["a"] = (Navbar);
+exports.default = Navbar;
 
 /***/ }),
 /* 93 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
 
 
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(7);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(15);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Project(props) {
-    const technologies = props.technologies.map(technology => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'span',
-        {
-            key: technology,
-            className: 'label label-technology'
-        },
-        technology
-    ));
-    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    var technologies = props.technologies.map(function (technology) {
+        return _react2.default.createElement(
+            'span',
+            {
+                key: technology,
+                className: 'label label-technology'
+            },
+            technology
+        );
+    });
+    return _react2.default.createElement(
         'div',
         { className: 'col-xs-12 col-sm-6 col-md-4 project-thumbnail' },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        _react2.default.createElement(
             'div',
             { className: 'thumbnail' },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            _react2.default.createElement(
                 'a',
                 {
                     href: props.url,
                     target: '_blank',
                     rel: 'noopener noreferrer'
                 },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', {
+                _react2.default.createElement('img', {
                     src: props.thumbnail,
                     alt: props.name
                 })
             ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            _react2.default.createElement(
                 'div',
                 { className: 'caption' },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                _react2.default.createElement(
                     'a',
                     {
                         href: props.url,
                         target: '_blank',
                         rel: 'noopener noreferrer'
                     },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    _react2.default.createElement(
                         'h3',
                         null,
                         props.name
                     )
                 ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                _react2.default.createElement(
                     'div',
                     { className: 'project-description' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    _react2.default.createElement(
                         'p',
                         null,
                         props.description
                     ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    _react2.default.createElement(
                         'p',
                         null,
                         technologies
                     )
                 ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                _react2.default.createElement(
                     'a',
                     {
                         href: props.repository,
                         target: '_blank',
                         rel: 'noopener noreferrer'
                     },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-lg fa-github-square', 'aria-hidden': 'true' }),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    _react2.default.createElement('i', { className: 'fa fa-lg fa-github-square', 'aria-hidden': 'true' }),
+                    _react2.default.createElement(
                         'span',
                         null,
                         ' View code on GitHub.'
@@ -10810,67 +10953,87 @@ function Project(props) {
 }
 
 Project.propTypes = {
-    name: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string.isRequired,
-    thumbnail: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string.isRequired,
-    description: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string.isRequired,
-    technologies: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.array.isRequired,
-    url: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string.isRequired,
-    repository: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string.isRequired
+    name: _propTypes2.default.string.isRequired,
+    thumbnail: _propTypes2.default.string.isRequired,
+    description: _propTypes2.default.string.isRequired,
+    technologies: _propTypes2.default.array.isRequired,
+    url: _propTypes2.default.string.isRequired,
+    repository: _propTypes2.default.string.isRequired
 };
 
-/* harmony default export */ __webpack_exports__["a"] = (Project);
+exports.default = Project;
 
 /***/ }),
 /* 94 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_transition_group_CSSTransitionGroup__ = __webpack_require__(192);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_transition_group_CSSTransitionGroup___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_transition_group_CSSTransitionGroup__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_jump_js__ = __webpack_require__(35);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Project__ = __webpack_require__(93);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__contentProjects__ = __webpack_require__(96);
 
 
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
 
+var _react = __webpack_require__(7);
 
+var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = __webpack_require__(15);
 
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _CSSTransitionGroup = __webpack_require__(192);
+
+var _CSSTransitionGroup2 = _interopRequireDefault(_CSSTransitionGroup);
+
+var _jump = __webpack_require__(35);
+
+var _jump2 = _interopRequireDefault(_jump);
+
+var _Project = __webpack_require__(93);
+
+var _Project2 = _interopRequireDefault(_Project);
+
+var _contentProjects = __webpack_require__(96);
+
+var _contentProjects2 = _interopRequireDefault(_contentProjects);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Projects(props) {
-    const filteredProjects = __WEBPACK_IMPORTED_MODULE_5__contentProjects__["a" /* default */].filter(project => project.technologies.indexOf(props.selectedTechnology) !== -1);
+    var filteredProjects = _contentProjects2.default.filter(function (project) {
+        return project.technologies.indexOf(props.selectedTechnology) !== -1;
+    });
 
-    const projectsList = (filteredProjects.length ? filteredProjects : __WEBPACK_IMPORTED_MODULE_5__contentProjects__["a" /* default */]).map(project => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__Project__["a" /* default */], {
-        key: project.name,
-        name: project.name,
-        thumbnail: project.thumbnail,
-        description: project.description,
-        technologies: project.technologies,
-        url: project.url,
-        repository: project.repositoryUrl
-    }));
+    var projectsList = (filteredProjects.length ? filteredProjects : _contentProjects2.default).map(function (project) {
+        return _react2.default.createElement(_Project2.default, {
+            key: project.name,
+            name: project.name,
+            thumbnail: project.thumbnail,
+            description: project.description,
+            technologies: project.technologies,
+            url: project.url,
+            repository: project.repositoryUrl
+        });
+    });
 
-    const filteredMessage = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    var filteredMessage = _react2.default.createElement(
         'div',
         { className: 'row-padded-top' },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        _react2.default.createElement(
             'p',
             { className: 'text-center' },
             'Showing projects made with ',
             props.selectedTechnology,
             '.\xA0',
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            _react2.default.createElement(
                 'a',
                 {
                     href: '#projects',
                     className: 'link-technology tip--top tip--large',
-                    onClick: () => {
+                    onClick: function onClick() {
                         props.onFilterReset();
-                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3_jump_js__["a" /* default */])('.js-jump-Projects');
+                        (0, _jump2.default)('.js-jump-Projects');
                     }
                 },
                 'Show all.'
@@ -10878,28 +11041,28 @@ function Projects(props) {
         )
     );
 
-    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    return _react2.default.createElement(
         'div',
         null,
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { id: 'projects', className: 'anchor js-jump-Projects' }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        _react2.default.createElement('span', { id: 'projects', className: 'anchor js-jump-Projects' }),
+        _react2.default.createElement(
             'section',
             { className: 'row row-section' },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            _react2.default.createElement(
                 'div',
                 { className: 'row' },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                _react2.default.createElement(
                     'h2',
                     { className: 'text-center' },
                     'Projects'
                 ),
                 props.selectedTechnology ? filteredMessage : null
             ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            _react2.default.createElement(
                 'div',
                 { className: 'row' },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    __WEBPACK_IMPORTED_MODULE_2_react_transition_group_CSSTransitionGroup___default.a,
+                _react2.default.createElement(
+                    _CSSTransitionGroup2.default,
                     {
                         transitionName: 'projects-list-easing',
                         transitionEnterTimeout: 500,
@@ -10913,42 +11076,49 @@ function Projects(props) {
 }
 
 Projects.propTypes = {
-    selectedTechnology: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string,
-    onFilterReset: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func.isRequired
+    selectedTechnology: _propTypes2.default.string,
+    onFilterReset: _propTypes2.default.func.isRequired
 };
 
 Projects.defaultProps = {
     selectedTechnology: null
 };
 
-/* harmony default export */ __webpack_exports__["a"] = (Projects);
+exports.default = Projects;
 
 /***/ }),
 /* 95 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return technologies; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return AboutText; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.AboutText = exports.technologies = undefined;
+
+var _react = __webpack_require__(7);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function AboutText() {
-    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    return _react2.default.createElement(
         'div',
         null,
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        _react2.default.createElement(
             'p',
             null,
             'Hi, I\'m a web developer from Belarus currently living in Amsterdam.'
         ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        _react2.default.createElement(
             'p',
             null,
             'After more than 5 years of working in IT as a system analyst now I\'ve shifted my focus to front-end development sphere. At the moment I\'m looking for new career challenges.'
         ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        _react2.default.createElement(
             'p',
             null,
             'As a front-end developer, I have a basic skillset and I keep learning new technologies to cover the gaps I currently have. I am highly analytical and I\'m focused on delivering solutions that are not only solving user and business problems but are also written in clean and structured code.'
@@ -10956,16 +11126,22 @@ function AboutText() {
     );
 }
 
-const technologies = [{ name: 'Javascript', filter: false }, { name: 'ES6', filter: false }, { name: 'React', filter: true }, { name: 'HTML', filter: true }, { name: 'CSS', filter: true }, { name: 'SCSS', filter: true }, { name: 'Sass', filter: false }, { name: 'Bootstrap', filter: true }, { name: 'jQuery', filter: true }, { name: 'Webpack', filter: true }, { name: 'NPM', filter: true }, { name: 'ESLint', filter: false }, { name: 'Git', filter: false }, { name: 'Jira', filter: false }];
+var technologies = [{ name: 'Javascript', filter: false }, { name: 'ES6', filter: false }, { name: 'React', filter: true }, { name: 'HTML', filter: true }, { name: 'CSS', filter: true }, { name: 'SCSS', filter: true }, { name: 'Sass', filter: false }, { name: 'Bootstrap', filter: true }, { name: 'jQuery', filter: true }, { name: 'Webpack', filter: true }, { name: 'NPM', filter: true }, { name: 'ESLint', filter: false }, { name: 'Git', filter: false }, { name: 'Jira', filter: false }];
 
-
+exports.technologies = technologies;
+exports.AboutText = AboutText;
 
 /***/ }),
 /* 96 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-const projectsContent = [{
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var projectsContent = [{
     name: 'Recipe Box',
     thumbnail: 'files/images/projects/projects_recipebox.png',
     description: 'Online recipe box to save favourite recipes.',
@@ -10994,15 +11170,36 @@ const projectsContent = [{
     technologies: ['HTML', 'CSS', 'jQuery'],
     repositoryUrl: 'https://github.com/ananasij/Calculator'
 }, {
-    name: 'Tic-tac-toe Game',
+    name: 'Tic-tac-toe',
     thumbnail: 'files/images/projects/projects_tictactoe.png',
     description: 'Classic Tic-Tac-Toe game for one player.',
     url: 'https://ananasij.github.io/Tic-Tac-Toe-game/',
     technologies: ['HTML', 'CSS', 'jQuery'],
     repositoryUrl: 'https://github.com/ananasij/Tic-Tac-Toe-game'
+}, {
+    name: 'freeCodeCamp leaderboard',
+    thumbnail: 'files/images/projects/projects_tictactoe.png',
+    description: 'A list of the most active freeCodeCamp participants.',
+    url: 'https://ananasij.github.io/leaderboard/',
+    technologies: ['React', 'SCSS', 'Bootstrap', 'Webpack', 'NPM'],
+    repositoryUrl: 'https://github.com/ananasij/leaderboard'
+}, {
+    name: 'TwitchTV browser',
+    thumbnail: 'files/images/projects/projects_tictactoe.png',
+    description: 'Classic Tic-Tac-Toe game for one player.',
+    url: 'https://ananasij.github.io/Tic-Tac-Toe-game/',
+    technologies: ['HTML', 'CSS', 'jQuery'],
+    repositoryUrl: 'https://github.com/ananasij/TwitchTV-app'
+}, {
+    name: 'Wiki-viewer',
+    thumbnail: 'files/images/projects/projects_tictactoe.png',
+    description: 'Classic Tic-Tac-Toe game for one player.',
+    url: 'https://ananasij.github.io/Tic-Tac-Toe-game/',
+    technologies: ['HTML', 'CSS', 'jQuery'],
+    repositoryUrl: 'https://github.com/ananasij/wiki-viewer'
 }];
 
-/* harmony default export */ __webpack_exports__["a"] = (projectsContent);
+exports.default = projectsContent;
 
 /***/ }),
 /* 97 */
