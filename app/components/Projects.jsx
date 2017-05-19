@@ -6,7 +6,17 @@ import Project from './Project';
 import projectsContent from './../contentProjects';
 
 class Projects extends React.Component {
-    static buildProjectsList(projects) {
+    constructor() {
+        super();
+        this.state = { view: 'collapsed' };
+    }
+
+    toggleView() {
+        const currentView = this.state.view === 'collapsed' ? 'expanded' : 'collapsed';
+        this.setState({ view: currentView });
+    }
+
+    buildProjectsList(projects) {
         return projects.map(project => (
             <Project
                 key={project.name}
@@ -18,16 +28,6 @@ class Projects extends React.Component {
                 repository={project.repositoryUrl}
             />
         ));
-    }
-
-    constructor() {
-        super();
-        this.state = { view: 'collapsed' };
-    }
-
-    toggleView() {
-        const currentView = this.state.view === 'collapsed' ? 'expanded' : 'collapsed';
-        this.setState({ view: currentView });
     }
 
     displayProjectsList() {
