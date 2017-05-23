@@ -47,35 +47,34 @@ class Projects extends React.Component {
                 </p>
             </div>
         );
-        let projectsToDisplay;
+        let filteredProjects;
 
         if (this.props.selectedTechnology) {
-            projectsToDisplay = projectsContent.filter(project => (
+            filteredProjects = projectsContent.filter(project => (
                 project.technologies.indexOf(this.props.selectedTechnology) !== -1
             ));
         } else {
-            projectsToDisplay = projectsContent;
+            filteredProjects = projectsContent;
         }
 
-        if (projectsToDisplay.length > 6) {
-            return (
-                <div>
-                    <div className="row">
-                        {
-                            this.state.view === 'collapsed' ?
-                                this.buildProjectsList(projectsToDisplay.slice(0, 6)) :
-                                this.buildProjectsList(projectsToDisplay)
-                        }
-                    </div>
-                    <div className="row">
-                        {viewSwitch}
-                    </div>
-                </div>
-            );
-        }
+        const projectsToDisplay = this.state.view === 'collapsed' && filteredProjects.length > 6 ?
+            this.buildProjectsList(filteredProjects.slice(0, 6)) :
+            this.buildProjectsList(filteredProjects);
+
         return (
-            <div className="row">
-                {this.buildProjectsList(projectsToDisplay)}
+            <div>
+                <div className="row">
+                    <CSSTransitionGroup
+                        transitionName="projects-list-easing"
+                        transitionEnterTimeout={500}
+                        transitionLeaveTimeout={300}
+                    >
+                        {projectsToDisplay}
+                    </CSSTransitionGroup>
+                </div>
+                <div className="row">
+                    {filteredProjects.length > 6 ? viewSwitch : null}
+                </div>
             </div>
         );
     }
@@ -107,13 +106,7 @@ class Projects extends React.Component {
                         <h2 className="text-center">Projects</h2>
                         {this.props.selectedTechnology ? filteredMessage : null}
                     </div>
-                    <CSSTransitionGroup
-                        transitionName="projects-list-easing"
-                        transitionEnterTimeout={500}
-                        transitionLeaveTimeout={300}
-                    >
-                        {this.displayProjectsList()}
-                    </CSSTransitionGroup>
+                    {this.displayProjectsList()}
                 </section>
             </div>
         );
