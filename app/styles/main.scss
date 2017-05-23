@@ -34,8 +34,12 @@ a {
   font: {
     family: $font-text;
   }
-  &:hover, &:active, &:focus {
+  &:hover, &:active, &:active:focus {
     color: $color-activeLink;
+  }
+  &:focus {
+    color: $color-link;
+    text-decoration: none;
   }
 }
 
