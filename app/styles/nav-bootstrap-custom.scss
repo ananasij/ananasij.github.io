@@ -1,0 +1,41 @@
+@media only screen and (min-width: 420px) {
+  .collapse {
+    display: block;
+  }
+
+  .navbar-header {
+    float: left;
+  }
+
+  .navbar-toggle {
+    display: none;
+  }
+
+  .navbar-nav {
+    &.navbar-left {
+      float: left;
+      margin: 0;
+    }
+    &.navbar-right {
+      float: right;
+      margin: 0;
+    }
+    li {
+      float: left;
+      a {
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .collapse {
+    display: none;
+  }
+
+  .navbar-header {
+    display: block;
+  }
+}
