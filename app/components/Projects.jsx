@@ -87,7 +87,8 @@ class Projects extends React.Component {
                     <a
                         href="#projects"
                         className="link-technology tip--top tip--large"
-                        onClick={() => {
+                        onClick={(e) => {
+                            e.preventDefault();
                             this.props.onFilterReset();
                             jump('.js-jump-Projects');
                         }}

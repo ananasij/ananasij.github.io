@@ -12,7 +12,13 @@ function Navbar() {
         const target = '.js-jump-'.concat(item.title);
         return (
             <li key={item.title}>
-                <a href={item.href} onClick={() => jump(target)}>
+                <a
+                    href={item.href}
+                    onClick={(e) => {
+                        e.preventDefault();
+                        jump(target);
+                    }}
+                >
                     {item.title}
                 </a>
             </li>

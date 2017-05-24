@@ -35,7 +35,10 @@ class About extends React.Component {
                     <a
                         href="#projects"
                         className={styles}
-                        onClick={e => this.handleTagClick(e)}
+                        onClick={(e) => {
+                            e.preventDefault();
+                            this.handleTagClick(e);
+                        }}
                         data-tip
                         data-tip-content="Click to view all projects made with this technology"
                     >
