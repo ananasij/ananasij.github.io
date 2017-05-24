@@ -13,16 +13,18 @@ function Project(props) {
     return (
         <div className="col-xs-12 col-sm-6 col-md-4 project-thumbnail">
             <div className="thumbnail">
-                <a
-                    href={props.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <img
-                        src={props.thumbnail}
-                        alt={props.name}
-                    />
-                </a>
+                <div className="project-img">
+                    <a
+                        href={props.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <img
+                            src={props.thumbnail}
+                            alt={props.name}
+                        />
+                    </a>
+                </div>
                 <div className="caption">
                     <a
                         href={props.url}
