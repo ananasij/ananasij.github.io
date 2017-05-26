@@ -10,7 +10,7 @@ const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const ExtractTextPluginConfig = new ExtractTextPlugin({ // define where to save the file
-    filename: 'dist/[name].bundle.css',
+    filename: '[name].bundle.css',
     allChunks: true
 });
 

@@ -138,6 +138,11 @@ a {
 
 .project-img {
   display: block;
+  background: {
+    image: url("../files/images/loader.svg");
+    repeat: no-repeat;
+    position: center;
+  }
 
   @media (min-width: 576px) {
     height: auto;
