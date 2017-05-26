@@ -16,10 +16,10 @@ const ExtractTextPluginConfig = new ExtractTextPlugin({ // define where to save 
 
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-const CopyWebpackPluginConfig = new CopyWebpackPlugin([{ from: './app/files', to: './files' }]);
+const CopyWebpackPluginConfig = new CopyWebpackPlugin([{ from: './app/files', to: './assets/app/files' }]);
 
 module.exports = {
-    entry: [path.join(__dirname, '/app/index.js'), path.join(__dirname, '/app/styles/main.scss')],
+    entry: [path.join(__dirname, '/app/src/index.js'), path.join(__dirname, '/app/styles/main.scss')],
     module: {
         rules: [
             {
@@ -42,7 +42,8 @@ module.exports = {
                 use: [{
                     loader: 'file-loader',
                     options: {
-                        name: '[path][name].[ext]'
+                        name: '[path][name].[ext]',
+                        outputPath: 'assets/'
                     }
                 }]
             }

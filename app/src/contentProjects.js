@@ -1,7 +1,8 @@
+const imgPath = 'assets/app/files/images/projects/';
 const projectsContent = [
     {
         name: 'Recipe Box',
-        thumbnail: 'files/images/projects/projects_recipebox.png',
+        thumbnail: imgPath.concat('projects_recipebox.png'),
         description: 'Online recipe box to save favourite recipes.',
         url: 'https://ananasij.github.io/recipe-box/',
         technologies: ['React', 'SCSS', 'Bootstrap', 'Local storage', 'Webpack', 'NPM'],
@@ -9,7 +10,7 @@ const projectsContent = [
     },
     {
         name: 'Simon Game',
-        thumbnail: 'files/images/projects/projects_simongame.png',
+        thumbnail: imgPath.concat('projects_simongame.png'),
         description: 'Follow the pattern of lights and sounds and repeat the same combination to test your memory.',
         url: 'https://ananasij.github.io/simonGame/',
         technologies: ['HTML', 'CSS', 'jQuery'],
@@ -17,7 +18,7 @@ const projectsContent = [
     },
     {
         name: 'Pomodoro Clock',
-        thumbnail: 'files/images/projects/projects_pomodoro.png',
+        thumbnail: imgPath.concat('projects_pomodoro.png'),
         description: 'Online timer for Pomodoro time management technique.',
         url: 'https://ananasij.github.io/PomodoroClock/',
         technologies: ['HTML', 'CSS', 'jQuery'],
@@ -25,7 +26,7 @@ const projectsContent = [
     },
     {
         name: 'Calculator',
-        thumbnail: 'files/images/projects/projects_calculator.png',
+        thumbnail: imgPath.concat('projects_calculator.png'),
         description: 'Basic online calculator.',
         url: 'https://ananasij.github.io/Calculator/',
         technologies: ['HTML', 'CSS', 'jQuery'],
@@ -33,7 +34,7 @@ const projectsContent = [
     },
     {
         name: 'Tic-tac-toe',
-        thumbnail: 'files/images/projects/projects_tictactoe.png',
+        thumbnail: imgPath.concat('projects_tictactoe.png'),
         description: 'Classic Tic-Tac-Toe game for one player.',
         url: 'https://ananasij.github.io/Tic-Tac-Toe-game/',
         technologies: ['HTML', 'CSS', 'jQuery'],
@@ -41,7 +42,7 @@ const projectsContent = [
     },
     {
         name: 'freeCodeCamp leaderboard',
-        thumbnail: 'files/images/projects/projects_leaderboard.png',
+        thumbnail: imgPath.concat('projects_leaderboard.png'),
         description: 'A list of the most active freeCodeCamp participants.',
         url: 'https://ananasij.github.io/leaderboard/',
         technologies: ['React', 'SCSS', 'Bootstrap', 'Webpack', 'NPM'],
@@ -49,7 +50,7 @@ const projectsContent = [
     },
     {
         name: 'TwitchTV browser',
-        thumbnail: 'files/images/projects/projects_twitchtv.png',
+        thumbnail: imgPath.concat('projects_twitchtv.png'),
         description: 'Search app for Twitch.tv streaming service (freeCodeCamp assignment).',
         url: 'https://ananasij.github.io/TwitchTV-app/',
         technologies: ['HTML', 'CSS', 'Bootstrap', 'jQuery'],
@@ -57,7 +58,7 @@ const projectsContent = [
     },
     {
         name: 'Wiki-viewer',
-        thumbnail: 'files/images/projects/projects_wikibrowser.png',
+        thumbnail: imgPath.concat('projects_wikibrowser.png'),
         description: 'Search app for Wikipedia articles (freeCodeCamp assignment).',
         url: 'https://ananasij.github.io/wiki-viewer/',
         technologies: ['HTML', 'CSS', 'Bootstrap', 'jQuery'],

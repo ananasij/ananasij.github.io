@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
+import CSSTransitionGroup from '../../../node_modules/react-transition-group/CSSTransitionGroup';
 import jump from 'jump.js';
 import Project from './Project';
 import projectsContent from './../contentProjects';
