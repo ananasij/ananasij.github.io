@@ -1,6 +1,14 @@
 const imgPath = 'assets/app/files/images/projects/';
 const projectsContent = [
     {
+        name: 'Game of Life',
+        thumbnail: imgPath.concat('projects_gameoflife.png'),
+        description: 'Game of Life is a zero-player game, meaning that its evolution is determined by its initial state, requiring no further input.',
+        url: 'https://ananasij.github.io/Game-of-Life/',
+        technologies: ['React', 'ES6', 'SCSS', 'Webpack', 'NPM'],
+        repositoryUrl: 'https://github.com/ananasij/Game-of-Life'
+    },
+    {
         name: 'Recipe Box',
         thumbnail: imgPath.concat('projects_recipebox.png'),
         description: 'Online recipe box to save favourite recipes.',

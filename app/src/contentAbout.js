@@ -17,7 +17,7 @@ function AboutText() {
 
 const technologies = [
     { name: 'Javascript', filter: false },
-    { name: 'ES6', filter: false },
+    { name: 'ES6', filter: true },
     { name: 'React', filter: true },
     { name: 'HTML', filter: true },
     { name: 'CSS', filter: true },
